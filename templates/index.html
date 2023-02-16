@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Home
+{% endblock %}
+
+{% block body  %}
+
+
+
+    <!-- Body -->
+
+    <!-- Input ToDo Data -->
+    <div class="container">
+
+      <h2 class="mx-3">Add ToDo</h2>
+    
+    <form class="container my-3">
+        <div class="mb-3">
+          <label for="todoTitle" class="form-label">ToDo Title</label>
+          <input type="text" class="form-control" id="todoTitle">
+        </div>
+        <div class="mb-3">
+          <label for="todoDesc" class="form-label">Todo Description</label>
+          <input type="text" class="form-control" id="todoDesc">
+        </div>
+       
+        <button id="submit" class="btn btn-primary">Add a ToDo</button>
+      </form>
+    </div>
+
+
+      <!-- Display ToDo Data -->
+      <div class="container">
+      <table class="table" >
+        <h2 class="container">ToDo's</h2>
+        <thead>
+          <tr>
+            <th scope="col">S. No.</th>
+            <th scope="col">ToDo Title</th>
+            <th scope="col">ToDo Description</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="table">
+          <tr>
+            <th scope="row">1</th>
+            <td>Shopping</td>
+            <td>You have to go to shopping to buy t-shirts.</td>
+            <td><button class="btn btn-sm btn-success">Update</button></td>
+            <td><button class="btn btn-sm btn-danger">Delete</button></td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+
+    {% endblock body %}
